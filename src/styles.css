@@ -245,6 +245,24 @@ body {
   background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
+/* Force modal body scrolling — Bootstrap defaults weren't applying reliably */
+.modal-dialog {
+  max-height: calc(100vh - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  max-height: calc(100vh - 2rem);
+  overflow: hidden;
+}
+
+.modal-body {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 @media print {
   .no-print {
     display: none !important;
