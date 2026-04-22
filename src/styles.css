@@ -1,0 +1,285 @@
+:root {
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --ink: #1a1a1a;
+  --muted: #6b7280;
+}
+
+body {
+  background: #f5f5f5;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.app-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.page-header {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.content-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.stat-card .stat-label {
+  font-size: 0.8125rem;
+  color: #0369a1;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0c4a6e;
+}
+
+.client-card {
+  background: #f8f9fa;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.policy-item {
+  background: #e0f2fe;
+  border-left: 3px solid var(--brand);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.interaction-item {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.interaction-item.has-followup {
+  border-left: 3px solid var(--brand);
+}
+
+.followup-alert {
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.followup-alert.overdue {
+  background: #fee2e2;
+  border: 1px solid #dc2626;
+  color: #7f1d1d;
+}
+
+.followup-alert.urgent {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #78350f;
+}
+
+.followup-alert.upcoming {
+  background: #e0f2fe;
+  border: 1px solid var(--brand);
+  color: #1e3a8a;
+}
+
+.report-hero {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-hero h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero-stat .label {
+  font-size: 0.8125rem;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+
+.hero-stat .value {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.report-section {
+  margin-bottom: 2rem;
+  page-break-inside: avoid;
+}
+
+.report-section h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.report-section h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  border-radius: 6px;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.report-table th {
+  text-align: left;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  font-weight: 500;
+}
+
+.report-table td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+}
+
+.report-table tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.health-card {
+  border-radius: 8px;
+  padding: 1rem;
+  border: 2px solid;
+}
+
+.cpf-card {
+  color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.cpf-card.oa {
+  background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+}
+
+.cpf-card.sa {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+}
+
+.cpf-card.ma {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+}
+
+.retirement-card {
+  color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.retirement-card.ilp {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.retirement-card.bank {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.retirement-card.total {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .report-section,
+  .report-table,
+  .policy-item,
+  .hero-stat {
+    page-break-inside: avoid;
+  }
+  .page-break-before {
+    page-break-before: always;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+  .modal,
+  .modal-dialog,
+  .modal-content {
+    position: static !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .modal-backdrop {
+    display: none !important;
+  }
+  .app-shell > *:not(.modal) {
+    display: none !important;
+  }
+}
