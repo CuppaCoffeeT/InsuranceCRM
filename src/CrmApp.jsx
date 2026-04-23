@@ -150,13 +150,17 @@ export default function CrmApp() {
 
   return (
     <div className="app-shell">
-      <div className="page-header d-flex justify-content-between align-items-start flex-wrap gap-2">
-        <div>
+      <div className="page-header d-flex justify-content-between align-items-center gap-2">
+        <div className="min-w-0">
           <h1>Insurance Advisor CRM</h1>
-          <p>Manage your clients, policies, and generate comprehensive reports</p>
+          <p className="d-none d-sm-block">
+            Manage your clients, policies, and generate comprehensive reports
+          </p>
         </div>
-        <div className="text-end small">
-          {user && <div className="text-muted mb-1">Signed in as {user.email}</div>}
+        <div className="text-end small flex-shrink-0">
+          {user && (
+            <div className="text-muted mb-1 d-none d-sm-block">Signed in as {user.email}</div>
+          )}
           <Button variant="outline-secondary" size="sm" onClick={signOut}>
             Sign out
           </Button>

@@ -37,6 +37,20 @@ body {
   margin: 0;
 }
 
+@media (max-width: 575.98px) {
+  .app-shell {
+    padding: 0.75rem;
+  }
+  .page-header {
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.875rem;
+  }
+  .page-header h1 {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+}
+
 .content-card {
   background: white;
   border-radius: 12px;
