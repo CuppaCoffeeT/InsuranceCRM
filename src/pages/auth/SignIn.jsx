@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Alert, Button, Form } from 'react-bootstrap';
 import { supabase } from '../../lib/supabase';
 import AuthLayout from './AuthLayout';
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const [info, setInfo] = useState(location.state?.info ?? null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
+    setInfo(null);
     setLoading(true);
     const { error: err } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
@@ -32,6 +35,7 @@ export default function SignIn() {
       }
     >
       <Form onSubmit={handleSubmit}>
+        {info && <Alert variant="success">{info}</Alert>}
         {error && <Alert variant="danger">{error}</Alert>}
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
