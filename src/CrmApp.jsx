@@ -10,6 +10,7 @@ import PolicyFormModal from './components/modals/PolicyFormModal';
 import InteractionFormModal from './components/modals/InteractionFormModal';
 import BankAccountFormModal from './components/modals/BankAccountFormModal';
 import ClientReportModal from './components/ClientReportModal';
+import LocalStorageImporter from './components/LocalStorageImporter';
 
 export default function CrmApp() {
   const { user, signOut } = useAuth();
@@ -166,6 +167,8 @@ export default function CrmApp() {
           </Button>
         </div>
       </div>
+
+      <LocalStorageImporter onImported={crm.refresh} />
 
       {crm.error && (
         <Alert variant="danger" className="no-print">
