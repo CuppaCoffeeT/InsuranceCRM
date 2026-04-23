@@ -10,8 +10,12 @@ Copy `.env.example` to `.env.local` and fill in:
 
 ```
 VITE_SUPABASE_URL=https://uivdgousiyfeyrebloaz.supabase.co
-VITE_SUPABASE_ANON_KEY=<anon public key from Supabase dashboard>
+VITE_SUPABASE_PUBLISHABLE_KEY=<publishable key from Supabase dashboard, starts with sb_publishable_>
 ```
+
+The publishable key is the current standard (the `anon` JWT is the legacy name for the same
+thing — both work, but prefer publishable). **Never** put the secret key (`sb_secret_...`) in
+the browser — it bypasses RLS.
 
 Both vars must also be set in **Vercel → Project → Settings → Environment Variables**
 for production and preview environments. Redeploy after setting them.
